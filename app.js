@@ -54,12 +54,12 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 function isCharAVowel(character) {
-  if (isCharAVowel = "a" ) {
-      return true;
+  if (character === "a" || character === "i" || character === "e" || character === "o" || character === "u") {
+    return "true"
   } else {
-      return false;
+    return "false"
   }
-}
+}      
 
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
@@ -76,12 +76,7 @@ should return 'johnsmith@example.com'.
 
 Complete the exercise in the space below:
 */
-function generateEmail(name, domain) {
-  if (name = "johnsmith", domain="example.com") {
-      return 'johnsmith@example.com'
-  }
-}
-
+const generateEmail = (name, domain) => {return name + "@" + domain}
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
@@ -97,9 +92,10 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 function greetUser(name, time) {
-   if (name = "Sam", time = "morning") {
-      return 'Good morning, Sam!'
+   if (name === "Sam" || time === "morning") {
+      return "Good" + " " + time + "," + name + "!"
    }
+   else return "incorrect"
 }
 
 
@@ -115,10 +111,12 @@ Example: maxOfThree(17, 4, 9) should return 17.
 
 Complete the exercise in the space below:
 */
-function maxOfThree(x, y, z) {
-  if (y >= x && y >= z){
-      return y
-  }
+function maxOfThree(num1, num2, num3) {
+  if (num1 > num2 && num1 > 3){
+      return num1
+  } else if (num2 > num1 && num2 > num3) {
+    return num2
+  } else return num3
 }
 
 
@@ -179,8 +177,15 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
-const basicCalculator = (num1, num2, operation) => {
-  return num1 - num2;
+function basicCalculator(firstNum, secondNum, operation) {
+  if (operation === "subtract")
+    return firstNum - secondNum
+  else if (operation === "add")
+    return firstNum + secondNum
+  else if (operation === "multiply")
+    return firstNum * secondNum
+  else if (operation === "divide")
+    return firstNum / secondNum
 }
 
 
